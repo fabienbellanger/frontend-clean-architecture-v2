@@ -2,7 +2,7 @@ import {ref, inject} from 'vue';
 import { defineStore } from 'pinia';
 import {SALE_REPOSITORY} from "@/DependencyInjection";
 import {CreateSaleRequest, CreateSaleUseCase, Price, Sale} from "@poc-clean-archi/domain";
-import {SaleRepositoryHttp} from "@poc-clean-archi/adapters";
+import type {SaleRepositoryHttp} from "@poc-clean-archi/adapters";
 
 export const useSaleStore = defineStore('sale', () => {
     const saleRepository = inject(SALE_REPOSITORY) as SaleRepositoryHttp;
@@ -19,7 +19,7 @@ export const useSaleStore = defineStore('sale', () => {
             sale.value = await createSaleUC.execute(request);
             loading.value = false;
         } catch (e) {
-            // sale.value = undefined;
+            // sale.value = undefined; // TODO: Remove
             loading.value = false;
             console.error('[ERROR] createSale()', e);
         }

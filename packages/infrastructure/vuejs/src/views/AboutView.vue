@@ -11,7 +11,7 @@
 </template>
 
 <script setup lang="ts">
-import {useSaleStore} from "@/stores/sale";
+import {useSaleStore} from "@/stores/saleStore";
 import {computed} from "vue";
 import {SalePresenter} from "@poc-clean-archi/adapters";
 

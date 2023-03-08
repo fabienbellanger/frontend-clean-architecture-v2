@@ -1,4 +1,4 @@
-import {CreateSaleRequest, SaleRepository} from "../ports";
+import type {CreateSaleRequest, SaleRepository} from "../ports";
 import {Price, Sale} from "../entities";
 
 export class CreateSaleUseCase {

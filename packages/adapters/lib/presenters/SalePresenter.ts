@@ -1,4 +1,4 @@
-import {Sale} from "@poc-clear-archi/domain";
+import type {Sale} from "@poc-clean-archi/domain";
 
 export class SalePresenter {
     constructor(

@@ -23,9 +23,9 @@
 </template>
 
 <script setup lang="ts">
-import {useSaleStore} from "@/stores/sale";
+import {useSaleStore} from "@/stores/saleStore";
 import {onMounted, ref} from "vue";
-import {CreateSaleRequest} from "@poc-clean-archi/domain";
+import type {CreateSaleRequest} from "@poc-clean-archi/domain";
 
 const saleStore = useSaleStore();
 const sale = ref<CreateSaleRequest>({
