@@ -1,5 +1,5 @@
 {
-  "name": "@poc-clear-archi/root",
+  "name": "@poc-clean-archi/root",
   "private": true,
   "workspaces": [
     "packages/*"

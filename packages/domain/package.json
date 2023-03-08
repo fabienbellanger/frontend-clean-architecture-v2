@@ -1,5 +1,5 @@
 {
-  "name": "@poc-clear-archi/domain",
+  "name": "@poc-clean-archi/domain",
   "version": "0.0.1",
   "description": "Domain couch",
   "author": "Fabien Bellanger <fabien.bellanger@apitic.com>",
@@ -10,9 +10,6 @@
     "lib": "lib",
     "test": "tests"
   },
-  "files": [
-    "lib"
-  ],
   "files": [
     "dist/**/*"
   ],
@@ -25,7 +22,10 @@
     "test": "jest",
     "prepublish": "tsc"
   },
-  "bugs": {
-    "url": "https://github.com/fabienbellanger/frontend-clean-architecture-v2/issues"
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.5",
+    "typescript": "^4.9.5"
   }
 }
