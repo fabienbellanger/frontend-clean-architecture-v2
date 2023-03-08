@@ -1,0 +1,31 @@
+{
+  "name": "@poc-clear-archi/domain",
+  "version": "0.0.1",
+  "description": "Domain couch",
+  "author": "Fabien Bellanger <fabien.bellanger@apitic.com>",
+  "homepage": "https://github.com/fabienbellanger/frontend-clean-architecture-v2#readme",
+  "license": "ISC",
+  "main": "lib/index.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "files": [
+    "lib"
+  ],
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabienbellanger/frontend-clean-architecture-v2.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublish": "tsc"
+  },
+  "bugs": {
+    "url": "https://github.com/fabienbellanger/frontend-clean-architecture-v2/issues"
+  }
+}

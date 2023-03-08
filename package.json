@@ -1,0 +1,14 @@
+{
+  "name": "@poc-clear-archi/root",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "build": "lerna run build"
+  },
+  "devDependencies": {
+    "lerna": "^6.5.1"
+  }
+}
