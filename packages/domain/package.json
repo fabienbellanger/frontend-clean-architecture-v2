@@ -19,7 +19,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "test-wait": "jest --coverage",
+    "test": "jest",
+    "coverage": "jest --coverage",
     "prepublish": "tsc"
   },
   "devDependencies": {
