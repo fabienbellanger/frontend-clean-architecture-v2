@@ -2,7 +2,8 @@
   "name": "@poc-clean-archi/root",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/infrastructure/*"
   ],
   "scripts": {
     "postinstall": "lerna bootstrap",

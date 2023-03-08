@@ -1,0 +1,34 @@
+{
+  "name": "@poc-clean-archi/adapters",
+  "version": "0.0.1",
+  "description": "Adapters couch",
+  "author": "Fabien Bellanger <fabien.bellanger@apitic.com>",
+  "homepage": "https://github.com/fabienbellanger/frontend-clean-architecture-v2#readme",
+  "license": "ISC",
+  "main": "lib/index.ts",
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabienbellanger/frontend-clean-architecture-v2.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublish": "tsc"
+  },
+  "dependencies": {
+    "@poc-clean-archi/domain": "0.0.1"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^27.5.1",
+    "ts-jest": "^27.1.5",
+    "typescript": "^4.9.5"
+  }
+}

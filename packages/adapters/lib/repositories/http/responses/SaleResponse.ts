@@ -1,4 +1,4 @@
-import {Price, Sale} from "@poc-clear-archi/domain";
+import {Price, Sale} from "@poc-clean-archi/domain";
 
 export interface SaleDto {
     id: string,

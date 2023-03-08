@@ -3,16 +3,15 @@ import {Sale, SaleRepository} from "@poc-clear-archi/domain";
 import {SaleDto, SaleResponse} from "./responses/SaleResponse";
 
 export class SaleRepositoryHttp implements SaleRepository {
-    constructor(private httpClient: HttpClient) {}
+    constructor(private httpClient: HttpClient) {
+    }
 
-    createSale(sale: Sale): Promise<void> {
-        return this.httpClient.post<void, SaleDto>('/sales', {
-            id: sale.id,
-            date: sale.date.toISOString(),
-            state: sale.state,
-            price: sale.price.value.toString(),
-        } as SaleDto)
-            .then();
+    createSale(sale: Sale): Promise<Sale> {
+        return this.httpClient.post<SaleDto, Sale>(
+            '/sales',
+            sale,
+        )
+            .then(sale => SaleResponse.toSaleDomain(sale));
     }
 
     getSales(): Promise<Sale[]> {

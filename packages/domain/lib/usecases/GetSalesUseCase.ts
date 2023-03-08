@@ -1,15 +1,10 @@
-import {CreateSaleRequest, SaleRepository} from "../ports";
+import {SaleRepository} from "../ports";
+import {Sale} from "../entities";
 
 export class GetSalesUseCase {
     constructor(private saleRepository: SaleRepository) {}
 
-    async execute(_request: CreateSaleRequest) {
-        try {
-            await this.saleRepository.getSales();
-            // TODO: Presenter ?
-        } catch (e) {
-            // TODO: Manage error
-            // TODO: Presenter ?
-        }
+    async execute(): Promise<Sale[]> {
+        return await this.saleRepository.getSales();
     }
 }
