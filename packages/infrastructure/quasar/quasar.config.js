@@ -28,7 +28,7 @@ module.exports = configure(function (/* ctx */) {
         // --> boot files are part of "main.js"
         // https://v2.quasar.dev/quasar-cli-vite/boot-files
         boot: [
-            'axios',
+            // 'axios',
             'http',
             'sale',
         ],
@@ -59,7 +59,7 @@ module.exports = configure(function (/* ctx */) {
                 node: 'node16'
             },
 
-            vueRouterMode: 'hash' // available values: 'hash', 'history'
+            vueRouterMode: 'history', // available values: 'hash', 'history'
             // vueRouterBase,
             // vueDevtools,
             // vueOptionsAPI: false,
@@ -68,7 +68,9 @@ module.exports = configure(function (/* ctx */) {
 
             // publicPath: '/',
             // analyze: true,
-            // env: {},
+            env: {
+                API_BASE_URL: 'http://localhost/api/v1',
+            },
             // rawDefine: {}
             // ignorePublicFolder: true,
             // minify: false,

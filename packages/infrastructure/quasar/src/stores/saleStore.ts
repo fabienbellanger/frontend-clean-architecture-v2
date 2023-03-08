@@ -7,7 +7,7 @@ export const useSaleStore = defineStore('sale', () => {
     const createSaleUC = new CreateSaleUseCase(saleRepository);
 
     // State
-    const sale = ref<Sale | undefined>(new Sale('id', new Date(), new Price(10.0, 'EUR'), 'open'));
+    const sale = ref<Sale | undefined>(new Sale('id', new Date(), new Price(10.5, 'EUR'), 'open'));
     const loading = ref(false);
 
     // Actions

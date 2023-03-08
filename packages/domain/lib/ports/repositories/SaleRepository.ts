@@ -1,6 +1,6 @@
-import type {Sale} from "@poc-clean-archi/domain";
+import type {CreateSaleRequest, Sale} from "@poc-clean-archi/domain";
 
 export interface SaleRepository {
-    createSale(sale: Sale): Promise<Sale>;
+    createSale(sale: CreateSaleRequest): Promise<Sale>;
     getSales(): Promise<Sale[]>;
 }
