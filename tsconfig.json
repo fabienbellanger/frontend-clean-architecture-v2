@@ -20,14 +20,17 @@
     "declaration": true,
     "noEmit": true,
     "paths": {
-      "@poc-clear-archi/domain": [
+      "@poc-clean-archi/domain": [
         "domain/lib"
       ],
-      "@poc-clear-archi/adapters": [
+      "@poc-clean-archi/adapters": [
         "adapters/lib"
       ],
-      "@poc-clear-archi/vuejs": [
+      "@poc-clean-archi/vuejs": [
         "infrastructure/vuejs/src"
+      ],
+      "@poc-clean-archi/quasar": [
+        "infrastructure/quasar/src"
       ]
     }
   }

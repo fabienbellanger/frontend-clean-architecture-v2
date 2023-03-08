@@ -25,6 +25,6 @@ export class SalePresenter {
         if (price.currency === 'EUR') {
             return price.value.toString() + ' €';
         }
-        return price.value.toString();
+        return price.value.toString() + ' ' + price.currency;
     }
 }
