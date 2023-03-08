@@ -17,15 +17,4 @@ import {SalePresenter} from "@poc-clean-archi/adapters";
 
 const saleStore = useSaleStore();
 const sale = computed(() => SalePresenter.fromDomain(saleStore.sale));
-
 </script>
-
-<style>
-@media (min-width: 1024px) {
-    .about {
-        min-height: 100vh;
-        display: flex;
-        align-items: center;
-    }
-}
-</style>
