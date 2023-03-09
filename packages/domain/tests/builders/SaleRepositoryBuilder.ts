@@ -1,4 +1,4 @@
-import {CreateSaleRequest, Sale, SaleRepository} from "@poc-clean-archi/domain";
+import { CreateSaleRequest, Sale, SaleRepository } from "@poc-clean-archi/domain";
 
 export class SaleRepositoryBuilder {
     private getSales: () => Promise<Sale[]> = () => Promise.resolve([]);
