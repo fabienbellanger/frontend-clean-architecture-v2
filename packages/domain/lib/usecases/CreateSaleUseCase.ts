@@ -1,10 +1,11 @@
-import type {CreateSaleRequest, SaleRepository} from "../ports";
-import type {Sale} from "../entities";
+import type { CreateSaleRequest, SaleService } from "../ports";
+import type { Sale } from "../entities";
 
 export class CreateSaleUseCase {
-    constructor(private saleRepository: SaleRepository) {}
+    constructor(private saleService: SaleService) {
+    }
 
     async execute(request: CreateSaleRequest): Promise<Sale> {
-        return await this.saleRepository.createSale(request);
+        return await this.saleService.createSale(request);
     }
 }

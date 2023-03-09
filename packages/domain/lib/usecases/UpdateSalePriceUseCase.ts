@@ -1,11 +1,11 @@
 import { Price, Sale } from "../entities";
+import { SaleService } from "../ports";
 
 export class UpdateSalePriceUseCase {
-    execute(sale: Sale, newPrice: Price): Sale {
-        if (sale.price.currency !== newPrice.currency) {
-            return sale;
-        }
-        sale.price = newPrice
-        return sale;
+    constructor(private service: SaleService) {
+    }
+
+    async execute(sale: Sale, newPrice: Price): Promise<Sale> {
+        return await this.service.updateSalePrice(sale, newPrice);
     }
 }
