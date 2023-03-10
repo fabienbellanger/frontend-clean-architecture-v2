@@ -1,11 +1,11 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
-import { saleRepository } from 'boot/sale';
+import { saleService } from 'boot/sale';
 import { CreateSaleRequest, CreateSaleUseCase, Price, Sale, UpdateSalePriceUseCase } from "@poc-clean-archi/domain";
 
 export const useSaleStore = defineStore('sale', () => {
-    const createSaleUC = new CreateSaleUseCase(saleRepository);
-    const updateSalePriceUC = new UpdateSalePriceUseCase();
+    const createSaleUC = new CreateSaleUseCase(saleService);
+    const updateSalePriceUC = new UpdateSalePriceUseCase(saleService);
 
     // State
     const sale = ref<Sale | undefined>(new Sale('id', new Date(), new Price(10.5, 'EUR'), 'open'));
@@ -28,9 +28,9 @@ export const useSaleStore = defineStore('sale', () => {
         }, 2_000);
     }
 
-    function updateSalePrice(price: number) {
+    async function updateSalePrice(price: number) {
         if (sale.value && !isNaN(price)) {
-            sale.value = updateSalePriceUC.execute(sale.value, new Price(price, 'EUR'));
+            sale.value = await updateSalePriceUC.execute(sale.value, new Price(price, 'EUR'));
             error.value = undefined;
         } else {
             error.value = new Error('invalid price or undefined sale');
