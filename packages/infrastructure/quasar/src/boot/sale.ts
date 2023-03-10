@@ -1,6 +1,6 @@
-import {SaleRepositoryHttp} from "@poc-clean-archi/adapters";
-import { SaleService } from "app/../../domain/lib";
-import {httpClient} from "boot/http";
+import { SaleRepositoryHttp } from '@poc-clean-archi/adapters';
+import { SaleService } from 'app/../../domain/lib';
+import { httpClient } from 'boot/http';
 
 // Repositories
 const saleRepository = new SaleRepositoryHttp(httpClient);
@@ -14,4 +14,4 @@ const saleService = new SaleService(saleRepository);
 //     app.config.globalProperties.$saleRepository = saleRepository
 // })
 
-export { saleService }
+export { saleService };

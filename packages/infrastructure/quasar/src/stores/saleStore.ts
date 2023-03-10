@@ -1,7 +1,7 @@
 import { ref } from 'vue';
 import { defineStore } from 'pinia';
 import { saleService } from 'boot/sale';
-import { CreateSaleRequest, CreateSaleUseCase, Price, Sale, UpdateSalePriceUseCase } from "@poc-clean-archi/domain";
+import { CreateSaleRequest, CreateSaleUseCase, Price, Sale, UpdateSalePriceUseCase } from '@poc-clean-archi/domain';
 
 export const useSaleStore = defineStore('sale', () => {
     const createSaleUC = new CreateSaleUseCase(saleService);
