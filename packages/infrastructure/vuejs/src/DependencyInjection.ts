@@ -1,9 +1,9 @@
-import type {App, InjectionKey} from 'vue';
-import type {HttpClient, HttpHeader} from "@poc-clean-archi/adapters";
-import {SaleRepositoryHttp} from "@poc-clean-archi/adapters";
-import type {SaleRepository} from "@poc-clean-archi/domain";
+import type { App, InjectionKey } from 'vue';
+import type { HttpClient, HttpHeader } from "@poc-clean-archi/adapters";
+import { SaleRepositoryHttp } from "@poc-clean-archi/adapters";
+import { SaleService } from "@poc-clean-archi/domain";
 
-export const SALE_REPOSITORY = Symbol() as InjectionKey<SaleRepository>;
+export const SALE_SERVICE = Symbol() as InjectionKey<SaleService>;
 
 export const dependencies = (app: App) => {
     const httpClient: HttpClient = {
@@ -40,5 +40,8 @@ export const dependencies = (app: App) => {
     // Repositories
     const saleRepository = new SaleRepositoryHttp(httpClient);
 
-    app.provide(SALE_REPOSITORY, saleRepository);
+    // Services
+    const saleService = new SaleService(saleRepository);
+
+    app.provide(SALE_SERVICE, saleService);
 }

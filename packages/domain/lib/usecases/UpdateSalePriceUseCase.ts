@@ -1,5 +1,5 @@
-import { Price, Sale } from "../entities";
-import { SaleService } from "../ports";
+import type { Price, Sale } from "../entities";
+import type { SaleService } from "../ports";
 
 export class UpdateSalePriceUseCase {
     constructor(private service: SaleService) {

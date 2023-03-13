@@ -1,7 +1,7 @@
 import type { HttpClient } from "./HttpClient";
 import type { Sale, SaleRepository } from "@poc-clean-archi/domain";
 import { type SaleDto, SaleResponse } from "./responses/SaleResponse";
-import { CreateSaleRequest } from "@poc-clean-archi/domain";
+import type { CreateSaleRequest } from "@poc-clean-archi/domain";
 
 export class SaleRepositoryHttp implements SaleRepository {
     constructor(private httpClient: HttpClient) {

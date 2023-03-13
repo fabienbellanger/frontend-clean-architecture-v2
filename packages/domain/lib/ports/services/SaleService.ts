@@ -1,5 +1,5 @@
 import type { CreateSaleRequest, Sale } from "@poc-clean-archi/domain";
-import { Price, SaleRepository } from "@poc-clean-archi/domain";
+import type { Price, SaleRepository } from "@poc-clean-archi/domain";
 
 // TODO: Add unit tests
 export class SaleService {

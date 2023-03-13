@@ -1,5 +1,5 @@
-import type {Sale} from "@poc-clean-archi/domain";
-import {Price} from "@poc-clean-archi/domain";
+import type { Sale } from "@poc-clean-archi/domain";
+import type { Price } from "@poc-clean-archi/domain";
 
 export class SalePresenter {
     constructor(
@@ -7,7 +7,8 @@ export class SalePresenter {
         public date: string,
         public price: string,
         public state: string,
-    ) {}
+    ) {
+    }
 
     static fromDomain(sale: Sale | undefined): SalePresenter {
         return {

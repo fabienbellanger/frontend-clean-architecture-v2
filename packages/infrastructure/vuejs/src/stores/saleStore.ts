@@ -1,12 +1,11 @@
-import {ref, inject} from 'vue';
+import { ref, inject } from 'vue';
 import { defineStore } from 'pinia';
-import {SALE_REPOSITORY} from "@/DependencyInjection";
-import {CreateSaleRequest, CreateSaleUseCase, Price, Sale} from "@poc-clean-archi/domain";
-import type {SaleRepositoryHttp} from "@poc-clean-archi/adapters";
+import { SALE_SERVICE } from "@/DependencyInjection";
+import { CreateSaleRequest, CreateSaleUseCase, Price, Sale, SaleService } from "@poc-clean-archi/domain";
 
 export const useSaleStore = defineStore('sale', () => {
-    const saleRepository = inject(SALE_REPOSITORY) as SaleRepositoryHttp;
-    const createSaleUC = new CreateSaleUseCase(saleRepository);
+    const saleService = inject(SALE_SERVICE) as SaleService;
+    const createSaleUC = new CreateSaleUseCase(saleService);
 
     // State
     const sale = ref<Sale | undefined>(new Sale('id', new Date(), new Price(10.0, 'EUR'), 'open'));

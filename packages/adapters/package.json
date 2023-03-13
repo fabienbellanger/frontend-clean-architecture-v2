@@ -27,9 +27,9 @@
     "@poc-clean-archi/domain": "0.0.1"
   },
   "devDependencies": {
-    "@types/jest": "^27.4.1",
-    "jest": "^27.5.1",
-    "ts-jest": "^27.1.5",
+    "@types/jest": "^29.4.0",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.0.5",
     "typescript": "^4.9.5"
   }
 }
